@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">BookCenter</string>
+    <string name="title_home">Home</string>
+    <string name="forum">Forum</string>
+    <string name="notification">Notification</string>
+    <string name="profile">Profile</string>
 </resources>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "732838270430",
+    "firebase_url": "https://bookcenter-94773.firebaseio.com",
+    "project_id": "bookcenter-94773",
+    "storage_bucket": "bookcenter-94773.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732838270430:android:06de2fdb7890937aeef94f",
+        "android_client_info": {
+          "package_name": "com.example.bookcenter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "732838270430-v9snh2rj623hun0m6dee3hcd1jl6p4rv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bookcenter",
+            "certificate_hash": "253945f1d7201208b922a8a9c4c2f19ef3172cc1"
+          }
+        },
+        {
+          "client_id": "732838270430-r1ov5jjodbrdk8gjbn7bgki00a7v59ej.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIM_qDbDqXV3ZjZwyxFDNbLnzqfaPSkDc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "732838270430-r1ov5jjodbrdk8gjbn7bgki00a7v59ej.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

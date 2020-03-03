@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:scrollbars="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/relative_wonder_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        >
+        <ImageView
+            android:id="@+id/user_wonder_profile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5sp"
+            android:layout_marginTop="5sp"
+            android:src="@drawable/wonderwoman"
+            android:background="@drawable/image_feed"/>
+        <EditText
+            android:id="@+id/add_text"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:textAllCaps="false"
+            android:layout_height="70sp"
+            android:background="@drawable/edittext_question"
+            android:hint="Add a question"
+            android:layout_toRightOf="@+id/user_wonder_profile"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_margin="5sp"
+        android:src="@drawable/line"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_margin="10dp">
+        <ImageView
+            android:id="@+id/image_ironman"
+            android:layout_width="50sp"
+            android:background="@drawable/image_feed"
+            android:src="@drawable/ironman"
+            android:layout_height="50sp"/>
+        <TextView
+            android:id="@+id/text_ironman"
+            android:layout_marginLeft="5sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/image_ironman"
+            android:text="Ironman"/>
+        <TextView
+            android:id="@+id/occupation"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/image_ironman"
+            android:layout_marginLeft="5sp"
+            android:layout_below="@+id/text_ironman"
+            android:layout_height="wrap_content"
+            android:text="Hero"/>
+        <ImageView
+            android:id="@+id/line_hero"
+            android:layout_width="wrap_content"
+            android:layout_height="17sp"
+            android:layout_below="@+id/text_ironman"
+            android:layout_toRightOf="@+id/occupation"
+            android:layout_marginTop="3sp"
+            android:layout_marginLeft="5sp"
+            android:src="@drawable/line_iron"/>
+        <TextView
+            android:id="@+id/top_comm"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/line_hero"
+            android:layout_below="@+id/text_ironman"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5sp"
+            android:text="Top commenter"/>
+    </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

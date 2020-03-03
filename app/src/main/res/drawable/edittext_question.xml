@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="@color/white"/>
+    <size android:width="12dp"/>
+    <stroke android:color="@color/jit_white"></stroke>
+    <stroke android:width="@dimen/cardview_default_elevation"/>
+    <size android:height="12dp"/>
+
+</shape>
