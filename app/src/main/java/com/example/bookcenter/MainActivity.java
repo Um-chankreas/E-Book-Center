@@ -1,14 +1,11 @@
 package com.example.bookcenter;
 
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
 import com.example.bookcenter.fragment_navigation.Fragment_Forum;
 import com.example.bookcenter.fragment_navigation.Fragment_Home;
@@ -20,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
 
     BottomNavigationView navigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

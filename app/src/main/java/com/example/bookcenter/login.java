@@ -1,13 +1,26 @@
 package com.example.bookcenter;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.regex.Pattern;
 
 public class login extends AppCompatActivity {
+
+    EditText input_email,input_password;
+
+    private static final Pattern Password_PATTERN = Pattern.compile
+            ("^" +
+            "(?=.*[0-9])" +
+            "(?=.*[a-zA-Z])" +
+            "(?=\\S+$)" +
+            ".{6,}" +
+            "$");
 
     Button btn_sign_up,btn_login;
 
@@ -15,6 +28,11 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        input_email = findViewById(R.id.edit_text_login_email);
+        input_password=findViewById(R.id.edit_text_login_password);
+
+
 
         btn_sign_up = findViewById(R.id.btn_con_eamil);
         btn_login =findViewById(R.id.btn_login);

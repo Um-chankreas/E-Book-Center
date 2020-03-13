@@ -21,6 +21,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="5sp"
+            android:padding="5sp"
             android:layout_marginTop="5sp"
             android:src="@drawable/wonderwoman"
             android:background="@drawable/image_feed"/>
@@ -31,6 +32,7 @@
             android:padding="10dp"
             android:textAllCaps="false"
             android:layout_height="70sp"
+            android:gravity="left|top"
             android:background="@drawable/edittext_question"
             android:hint="Add a question"
             android:layout_toRightOf="@+id/user_wonder_profile"/>
@@ -85,7 +87,61 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5sp"
             android:text="Top commenter"/>
+        <ImageView
+            android:id="@+id/icon_save"
+            android:layout_width="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_feather_bookmark"/>
     </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/show_qu"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:background="@drawable/btn_save_qu">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_marginTop="70sp"
+                    android:layout_marginRight="5sp"
+                    android:layout_marginLeft="5sp"
+                    android:src="@drawable/line"/>
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/btn_fav"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/love_icon"
+                    android:padding="10sp"
+                    android:background="@drawable/btn_like"/>
+                <EditText
+                    android:id="@+id/btn_reply"
+                    android:layout_width="match_parent"
+                    android:layout_height="35sp"
+                    android:hint="Reply Comment"
+                    android:padding="5sp"
+                    android:layout_marginLeft="8sp"
+                    android:background="@drawable/btn_reply"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
