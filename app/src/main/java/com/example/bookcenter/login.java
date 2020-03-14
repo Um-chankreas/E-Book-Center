@@ -2,6 +2,7 @@ package com.example.bookcenter;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,13 +15,12 @@ public class login extends AppCompatActivity {
 
     EditText input_email,input_password;
 
-    private static final Pattern Password_PATTERN = Pattern.compile
-            ("^" +
-            "(?=.*[0-9])" +
-            "(?=.*[a-zA-Z])" +
-            "(?=\\S+$)" +
-            ".{6,}" +
-            "$");
+    private static final Pattern Password_PATTERN = Pattern.compile("^" +
+                    "(?=.*[0-9])" +
+                    "(?=.*[a-zA-Z])" +
+                    "(?=\\S+$)" +
+                    ".{6,}" +
+                    "$");
 
     Button btn_sign_up,btn_login;
 
@@ -46,9 +46,53 @@ public class login extends AppCompatActivity {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onpenhome();
+                if (!validationEmail() | !validationPassword())
+                {
+                    return;
+                }
+                else {
+                    onpenhome();
+                }
+
             }
         });
+    }
+    public boolean validationEmail()
+    {
+        String emailInput = input_email.getText().toString().trim();
+        if (emailInput.isEmpty())
+        {
+            input_email.setError("Email can't be empty!");
+            return false;
+        }
+        else if (!Patterns.EMAIL_ADDRESS.matcher(emailInput).matches())
+        {
+            input_email.setError("Please input valid email!");
+            return false;
+        }
+        else
+        {
+            input_email.setError(null);
+            return true;
+        }
+    }
+    public boolean validationPassword()
+    {
+        String passwordInput = input_password.getText().toString().trim();
+        if (passwordInput.isEmpty())
+        {
+            input_password.setError("Password can't be empty!");
+            return false;
+        }
+        else if (!Password_PATTERN.matcher(passwordInput).matches())
+        {
+            input_password.setError("Please input valid Password!");
+            return false;
+        }
+        else {
+            input_password.setError(null);
+            return true;
+        }
     }
     public void opentSignup()
     {

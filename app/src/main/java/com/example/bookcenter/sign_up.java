@@ -66,24 +66,24 @@ public class sign_up extends AppCompatActivity {
                     return;
                 }
 
-                HashMap data = new HashMap();
-                data.put("Username",editText_Username.getText().toString());
-                data.put("Email",editText_Email.getText().toString());
-                data.put("Password",editText_Password.getText().toString());
-                String url = "http://192.168.43.238:8000/api/user/create";
 
-                postData(url,data);
+                    HashMap data = new HashMap();
+                    data.put("Username", editText_Username.getText().toString());
+                    data.put("Email", editText_Email.getText().toString());
+                    data.put("Password", editText_Password.getText().toString());
+                    String url = "http://192.168.43.238:8000/api/user/create";
 
-                String input ="Username:" + editText_Username.getText().toString();
-                input += "\n";
-                input ="Email:" + editText_Email.getText().toString();
-                input += "\n";
-                input += "Password: " + editText_Password.getText().toString();
-                openToHome();
+                    postData(url, data);
 
+                    String input = "Username:" + editText_Username.getText().toString();
+                    input += "\n";
+                    input = "Email:" + editText_Email.getText().toString();
+                    input += "\n";
+                    input += "Password: " + editText_Password.getText().toString();
+                    openToHome();
 
+                }
 
-            }
         });
     }
     private boolean validateEmail()
@@ -155,7 +155,6 @@ public class sign_up extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         Log.e("SUCC_onResponse",response.toString());
-                        // do your business logic here.....
                         clearEditTextView();
                     }
                 },
